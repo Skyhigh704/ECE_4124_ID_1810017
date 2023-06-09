@@ -6,8 +6,9 @@
 | 2       | Causal Systems                |
 | 3       | Noncausal Systems             |
 | 4       | Anticausal Systems            |
-| 5       | Results and Analysis          |
-| 6       | Conclusion                    |
+| 5       | Inverse Z transform           |
+| 6       | Results and Analysis          |
+| 7       | Conclusion                    |
 # Experiment Name: Causal, Noncausal, and Anticausal Systems
 
 # Report: Z-Transform of Causal, Noncausal, and Anticausal Signals using MATLAB
@@ -98,12 +99,8 @@ grid
 ![Causal System](output/anticausal.png)
 ### Results and Analysis
 By applying the Z-transform to an anticausal signal, we can observe its representation in the Z-domain. The Z-plane plot provides information about the poles and zeros, aiding in the analysis of system properties.
-## 1.Inverse Z-Transform
+## 4.Inverse Z-Transform
 The inverse Z-transform of a function F(z) is denoted as f[n] and represents the corresponding time-domain sequence. It can be computed using techniques such as partial fraction expansion, power series expansion, or contour integration.
-
-## 2. MATLAB Code for Inverse Z-Transform
-Let's consider an example where we have a rational function F(z) in the Z-domain, and we want to find its inverse Z-transform f[n].
-
 ### MATLAB Code
 ```matlab
 clc;
@@ -125,7 +122,7 @@ text(real(p)+0.1,imag(p),"Pole")
 ```
 ### Plotting of Inverse z-transform of a system
 ![Causal System](output/inverse.png)
-## 3. Results and Analysis
+###  Results and Analysis
 The MATLAB code above demonstrates the computation of the inverse Z-transform for a rational function F(z). The `residue` function is used to compute the residues and poles of the function, which are then used to obtain the time-domain sequence f[n] up to n = 10.
 
 The results of the inverse Z-transform are displayed in a table, showing the values of n and f[n]. The specific values will depend on the function and the desired range of n.
