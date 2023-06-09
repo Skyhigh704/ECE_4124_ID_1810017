@@ -80,15 +80,22 @@ An anticausal signal is one that starts at negative infinity and remains zero fo
 ### MATLAB Code for Anticausal Signal
 ```matlab
 % Define the anticausal signal
-n = -3:0;
-x = [4, 3, 2, 1];
-
+clc;
+clear all;
+x=input('array: ');b=0;
+y=sym('z');
+n=length(x);
 % Compute and plot the Z-transform
-z = ztrans(x, n, 'z');
-zplane([], []);
-title('Z-plane for Anticausal Signal');
+for i=1:n
+   b=b+x(i)*y^(-(i-n));   
+end
+z=[];
+p=[]
+zplane(z,p)
+grid
 ```
-
+### Ploting Z-transform of Non-Causal System.
+![Causal System](output/anticausal.png)
 ### Results and Analysis
 By applying the Z-transform to an anticausal signal, we can observe its representation in the Z-domain. The Z-plane plot provides information about the poles and zeros, aiding in the analysis of system properties.
 
