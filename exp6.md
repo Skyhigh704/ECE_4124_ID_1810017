@@ -39,7 +39,7 @@ grid
 title('Z-plane for Causal Signal');
 ```
 ### Ploting Z-transform of Causal System.
-![Causal System](images/causal.png)
+![Causal System](output/causal.png)
 ### Results and Analysis
 By applying the Z-transform to the causal signal, we obtain its corresponding representation in the Z-domain. The resulting Z-plane plot shows the location of the poles and zeros of the signal. Analyzing the plot can provide insights into the stability and frequency response of the signal.
 
@@ -51,15 +51,24 @@ A noncausal signal is one that extends to infinity in both the positive and nega
 ### MATLAB Code for Noncausal Signal
 ```matlab
 % Define the noncausal signal
-n = -2:2;
-x = [0, 1, 2, 3, 4];
-
+clc;
+clear all;
+x=input('array: ');b=0;
+y=sym('z');
+n=length(x);
+m=input('index:')
 % Compute and plot the Z-transform
-z = ztrans(x, n, 'z');
-zplane([], []);
+for i=1:n
+   b=b+x(i)*y^(m-i);     
+end
+z=[];
+p=[0]
+zplane(z,p)
+grid
 title('Z-plane for Noncausal Signal');
 ```
-
+### Ploting Z-transform of Non-Causal System.
+![Causal System](output/causal.png)
 ### Results and Analysis
 When applying the Z-transform to a noncausal signal, we observe its representation in the Z-domain. The Z-plane plot displays the distribution of poles and zeros, which can provide insights into the system's behavior.
 
