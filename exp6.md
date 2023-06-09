@@ -94,10 +94,41 @@ p=[]
 zplane(z,p)
 grid
 ```
-### Ploting Z-transform of Non-Causal System.
+### Ploting Z-transform of anti-Causal System.
 ![Causal System](output/anticausal.png)
 ### Results and Analysis
 By applying the Z-transform to an anticausal signal, we can observe its representation in the Z-domain. The Z-plane plot provides information about the poles and zeros, aiding in the analysis of system properties.
+## 1.Inverse Z-Transform
+The inverse Z-transform of a function F(z) is denoted as f[n] and represents the corresponding time-domain sequence. It can be computed using techniques such as partial fraction expansion, power series expansion, or contour integration.
+
+## 2. MATLAB Code for Inverse Z-Transform
+Let's consider an example where we have a rational function F(z) in the Z-domain, and we want to find its inverse Z-transform f[n].
+
+### MATLAB Code
+```matlab
+clc;
+clear all;
+y=sym('z');syms n;
+%f=exp(-2*n);
+f=2^-n;
+F=ztrans(f)
+t=iztrans(F);
+t=simplify(t);
+disp(t);z=[0];
+b = [1];
+a = [1 -1/2];
+[b,a] = eqtflength(b,a);
+[z,p,k] = tf2zp(b,a)
+zplane(b,a)
+text(real(z)+0.1,imag(z),"Zero")
+text(real(p)+0.1,imag(p),"Pole")
+```
+### Plotting of Inverse z-transform of a system
+![Causal System](output/inverse.png)
+## 3. Results and Analysis
+The MATLAB code above demonstrates the computation of the inverse Z-transform for a rational function F(z). The `residue` function is used to compute the residues and poles of the function, which are then used to obtain the time-domain sequence f[n] up to n = 10.
+
+The results of the inverse Z-transform are displayed in a table, showing the values of n and f[n]. The specific values will depend on the function and the desired range of n.
 
 ## Conclusion
 In this report, we explored the Z-transform of causal, noncausal, and anticausal signals using MATLAB. By analyzing the resulting Z-plane plots, we gained insights into the characteristics and behavior of the signals in the Z-domain. The Z-transform is a valuable tool for understanding discrete-time signals and systems and is widely used
