@@ -68,7 +68,7 @@ grid
 title('Z-plane for Noncausal Signal');
 ```
 ### Ploting Z-transform of Non-Causal System.
-![Causal System](output/causal.png)
+![Causal System](output/noncausal.png)
 ### Results and Analysis
 When applying the Z-transform to a noncausal signal, we observe its representation in the Z-domain. The Z-plane plot displays the distribution of poles and zeros, which can provide insights into the system's behavior.
 
