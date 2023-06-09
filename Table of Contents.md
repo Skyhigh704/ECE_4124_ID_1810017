@@ -3,7 +3,7 @@
 1. [Experiment 1: Introduction to Circuit Analysis](#experiment-1-introduction-to-circuit-analysis)
 2. [Experiment 2: Measurement Techniques in Electronics](#experiment-2-measurement-techniques-in-electronics)
 3. [Experiment 3: Design and Analysis of Analog Filters](#experiment-3-design-and-analysis-of-analog-filters)
-4. [Experiment 4: Digital Logic Design and Implementation](#experiment-4-digital-logic-design-and-implementation)
+4. [Experiment 4: Study of identifyinh delay using correlation](#exp4.pdf)
 5. [Experiment 5: Communication Systems](#experiment-5-communication-systems)
 
 ## Experiment 1: Introduction to Circuit Analysis
