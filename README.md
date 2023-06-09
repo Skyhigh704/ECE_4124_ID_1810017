@@ -6,8 +6,7 @@ This repository serves as a collection of lab reports for Course No. 4124. Each 
 ## Repository Structure
 1. **README.md**: This file serves as the main page of the repository and provides an overview of its contents and usage instructions.
 2. **Student_info.md**: This file contain student information.
-3. **Lab Reports**: This directory contains all the lab reports for Course No. 4124. Each lab report is stored as a separate Markdown file, labeled with a unique identifier or name related to the corresponding experiment or assignment.
-
+3. **Table of Contents.md**: This file contain all experiment name and corresponding links.
 4. **Output**: This folder stores all output figures generated . It provides a centralized location for the graphical representations of experiments.
 
 
